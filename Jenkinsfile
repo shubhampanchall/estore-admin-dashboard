@@ -25,8 +25,11 @@ pipeline {
         }
     }
     post {
+        success {
+            // Add steps or notifications for a successful build
+        }
         failure {
-            // Add notifications or cleanup steps on failure
+            // Add steps or notifications for a failed build
         }
     }
 }
