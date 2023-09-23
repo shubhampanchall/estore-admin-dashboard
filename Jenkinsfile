@@ -9,7 +9,7 @@ git branch:'master',url:'https://github.com/shubhampanchall/estore-admin-dashboa
 }
 stage('Compile'){
 steps{
-bat "npm install"
+bat "npm install --force "
 }
 }
 stage('Test'){
