@@ -3,7 +3,7 @@ agent any
 stages{
 stage('Source'){
 steps{
-git branch:'main',url:'https://github.com/Raju7860/estore_Admin_Dashboard.git'
+git branch:'main',url:'https://github.com/shubhampanchall/estore-admin-dashboard.git'
 }
 }
 stage('Compile'){
