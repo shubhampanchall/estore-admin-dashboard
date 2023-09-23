@@ -1,27 +1,25 @@
-pipeline {
-    agent any
-    tools {
-        nodejs "NodeJS"
-    }
-    stages {
-        stage('Source') {
-            steps {
-                git 'https://github.com/shubhampanchall/estore-admin-dashboard.git'
-                sh "npm install"
-                echo 'Source Stage Finished'
-            }
-        }
-        stage('Test') {
-            steps {
-                sh "npm run cypress:run"
-                echo 'Test Stage Finished'
-            }
-        }
-        stage('Build') {
-            steps {
-                sh "npm run ng build"
-                echo 'Build Stage Finished'
-            }
-        }
-    }
+pipeline{
+agent any
+stages{
+stage('Source'){
+steps{
+git branch:'main',url:'https://github.com/shubhampanchall/estore-admin-dashboard.git/'
+}
+}
+stage('Compile'){
+steps{
+bat "npm install"
+}
+}
+stage('Test'){
+steps{
+bat "npm run ng test "
+}
+}
+stage('Build'){
+steps{
+bat "npm run ng build"
+}
+}
+}
 }
