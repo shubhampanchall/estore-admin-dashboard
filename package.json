@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "npx karma start karma.conf.js"  // Add this line
+    "test": "npx karma start karma.conf.js"  
   },
   "private": true,
   "dependencies": {
